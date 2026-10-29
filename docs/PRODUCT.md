@@ -2,7 +2,7 @@
 
 ## Status
 
-Este documento define o produto planejado. Na Fase 0, nenhuma funcionalidade da aplicação foi implementada.
+Este documento define o produto planejado. Na Fase 1 foi implementada somente a estrutura técnica e uma tela neutra; nenhuma funcionalidade de previsão foi implementada.
 
 ## Problema
 
@@ -66,4 +66,4 @@ Não fazem parte do MVP: geolocalização, busca ou seleção de cidades, favori
 
 ## Planejado versus implementado
 
-Todos os requisitos, regras e critérios deste documento são planejados. Na Fase 0, somente a documentação e as instruções persistentes foram criadas; não há interface ou integração meteorológica implementada.
+Os requisitos, regras e critérios de previsão deste documento são planejados. A Fase 1 implementou somente uma tela neutra com o título “Clima Guarulhos” e a indicação de que a previsão será carregada nas próximas fases; não há dados meteorológicos ou integração implementados.

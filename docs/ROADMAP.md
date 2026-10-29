@@ -1,6 +1,6 @@
 # Roadmap
 
-As fases representam trabalho planejado. Somente a Fase 0 foi concluída; as demais ainda não foram iniciadas.
+As fases representam o trabalho planejado. As Fases 0 e 1 foram concluídas; as demais ainda não foram iniciadas.
 
 ## Fase 0 — instruções e documentação
 
@@ -10,9 +10,9 @@ Criar instruções persistentes do Copilot, definição inicial do produto, arqu
 
 ## Fase 1 — estrutura técnica
 
-**Status: Planejada.**
+**Status: Concluída.**
 
-Configurar React, TypeScript, Vite, CSS base, Vitest, React Testing Library e ESLint; estabelecer a estrutura inicial e validar scripts de lint, teste e build.
+Configurados na raiz React, TypeScript strict, Vite, CSS base, Vitest com jsdom, React Testing Library e ESLint. Criados a tela neutra inicial, o teste de renderização, scripts npm e arquivos de configuração. Lint, testes e build de produção foram validados.
 
 ## Fase 2 — integração com API
 

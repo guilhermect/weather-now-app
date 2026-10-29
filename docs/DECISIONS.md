@@ -9,12 +9,33 @@ Registro cronológico de decisões técnicas e de produto. As decisões registra
 - **Motivo:** refletir o nome escolhido para o produto.
 - **Consequências:** usar Weather Now App na documentação; Guarulhos continua sendo a localização fixa do MVP.
 
+## 2026-10-29 — Estrutura técnica da Fase 1
+
+- **Contexto:** iniciar a aplicação sem antecipar integração e regras do MVP.
+- **Decisão:** configurar React, TypeScript strict e Vite na raiz; ESLint flat config; Vitest com jsdom e React Testing Library; CSS nativo; npm como gerenciador por não existir um configurado.
+- **Motivo:** atender à stack solicitada com ferramentas leves e verificações locais.
+- **Consequências:** usar Node.js `^20.19`, `^22.13` ou `>=24` e npm 10+; não adicionar bibliotecas de roteamento, estado, datas, ícones ou componentes.
+
+## 2026-10-29 — Estrutura incremental por funcionalidade
+
+- **Contexto:** preparar a organização do código sem implementar funcionalidades futuras.
+- **Decisão:** criar `app/`, `features/weather/components/`, `styles/` e `test/`; adiar `api/`, `domain/`, `hooks/` e `model/` até serem necessários.
+- **Motivo:** manter a estrutura por funcionalidade sem diretórios vazios ou scaffolding prematuro.
+- **Consequências:** adicionar as camadas da funcionalidade weather junto com sua implementação nas fases futuras.
+
+## 2026-10-29 — Título da tela inicial
+
+- **Contexto:** definir o texto da estrutura neutra solicitada para a Fase 1, mantendo o nome do produto registrado.
+- **Decisão:** usar “Clima Guarulhos” como título da tela e manter Weather Now App como nome do produto e do documento HTML.
+- **Motivo:** atender ao texto solicitado para a tela sem alterar a decisão anterior sobre o nome do app.
+- **Consequências:** o título inicial identifica a localização fixa; não representa a previsão nem altera o nome do produto.
+
 ## 2026-10-29 — React, TypeScript e Vite
 
 - **Contexto:** definir a stack de interface para o MVP.
-- **Decisão:** planejar React, TypeScript e Vite.
+- **Decisão:** usar React, TypeScript e Vite.
 - **Motivo:** atender à aplicação web single-page com tipagem e fluxo de desenvolvimento simples.
-- **Consequências:** configurar a estrutura técnica na Fase 1; nenhuma dessas ferramentas foi instalada ou configurada na Fase 0.
+- **Consequências:** ferramentas configuradas na Fase 1; a aplicação ainda não consulta nem exibe previsão.
 
 ## 2026-10-29 — Sem backend no MVP
 

@@ -2,7 +2,33 @@
 
 ## Status
 
-Arquitetura planejada; a aplicação ainda não possui código.
+A estrutura técnica da Fase 1 está implementada. A integração e as regras de domínio seguem planejadas para fases futuras.
+
+## Estrutura implementada
+
+```text
+index.html
+src/
+  app/
+    App.tsx
+  features/
+    weather/
+      components/
+        WeatherPage.tsx
+  styles/
+    global.css
+    tokens.css
+  test/
+    setup.ts
+    WeatherPage.test.tsx
+  main.tsx
+eslint.config.js
+vite.config.ts
+```
+
+TypeScript está configurado em modo strict. Vite fornece o servidor de desenvolvimento e o build; ESLint, Vitest e React Testing Library estão configurados para as verificações locais.
+
+As pastas `api/`, `domain/`, `hooks/` e `model/` da funcionalidade weather ainda não foram criadas. Serão adicionadas nas fases que implementarem essas responsabilidades, evitando diretórios vazios e scaffolding sem comportamento.
 
 ## Arquitetura planejada
 
@@ -20,24 +46,20 @@ Aplicação single-page React com TypeScript, sem backend no MVP. A interface co
 
 Open-Meteo -> camada de API -> normalização -> regras de domínio -> hook -> componentes.
 
-## Estrutura de diretórios planejada
+## Estrutura de diretórios futura
 
 ```text
 src/
-  app/
   features/
-    forecast/
+    weather/
       api/
       components/
       domain/
       hooks/
-      styles/
-      types/
-  shared/
-    styles/
+      model/
 ```
 
-Esta estrutura é uma referência para a Fase 1, não diretórios já existentes.
+Somente `components/` da funcionalidade weather existe nesta fase. Os demais diretórios representam a organização prevista quando a funcionalidade correspondente for implementada.
 
 ## Decisões para evitar complexidade desnecessária
 
@@ -49,4 +71,4 @@ Esta estrutura é uma referência para a Fase 1, não diretórios já existentes
 
 ## Planejado versus implementado
 
-Todo o conteúdo deste documento descreve a arquitetura futura. Nenhuma estrutura de aplicação, camada, fluxo ou dependência foi implementada na Fase 0.
+A aplicação React, o entry point, os estilos globais e os testes básicos foram implementados na Fase 1. O fluxo Open-Meteo -> API -> normalização -> domínio -> hook -> componentes continua planejado; não há chamadas de API, análise meteorológica ou interface de previsão implementadas.

@@ -58,12 +58,19 @@ Registro cronológico de decisões técnicas e de produto. As decisões registra
 - **Motivo:** o escopo single-page não justifica estado global no MVP.
 - **Consequências:** componentes e hooks da funcionalidade de previsão serão responsáveis pelo estado necessário.
 
+## 2026-10-30 — Integração e normalização da Open-Meteo
+
+- **Contexto:** implementar a camada de dados meteorológicos da Fase 2 sem iniciar a interface de previsão ou as regras definitivas de chuva.
+- **Decisão:** consultar `https://api.open-meteo.com/v1/forecast` com Fetch API e `URLSearchParams`; usar Guarulhos (`-23.4628`, `-46.5333`), fuso `America/Sao_Paulo`, 15 dias, Celsius e milímetros. Separar tipos externos, domínio, construção da URL, cliente, validação, normalização e erros; aplicar timeout de 10 segundos e aceitar `AbortSignal`.
+- **Motivo:** manter a integração externa isolada, detectar respostas inválidas e entregar objetos de domínio sem arrays paralelos.
+- **Consequências:** não há backend, chave ou variável de ambiente; a tela ainda não chama o serviço. Testes usam fixtures locais e mocks de `fetch`; algoritmo de intervalos, conexão com a interface e atribuição visível permanecem em fases futuras.
+
 ## 2026-10-29 — Open-Meteo como fonte meteorológica
 
 - **Contexto:** selecionar a fonte planejada de previsão.
 - **Decisão:** usar a Open-Meteo.
 - **Motivo:** atender à fonte solicitada para dados diários e horários.
-- **Consequências:** documentar contrato, erros e atribuição antes de concluir a integração na Fase 2.
+- **Consequências:** contrato e erros documentados na Fase 2; atribuição visível permanece necessária na implementação da interface.
 
 ## 2026-10-29 — Interface single-page
 

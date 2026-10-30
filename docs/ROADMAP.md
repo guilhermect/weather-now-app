@@ -1,6 +1,6 @@
 # Roadmap
 
-As fases representam o trabalho planejado. As Fases 0 e 1 foram concluídas; as demais ainda não foram iniciadas.
+As fases representam o trabalho planejado. As Fases 0, 1 e 2 foram concluídas; as demais ainda não foram iniciadas.
 
 ## Fase 0 — instruções e documentação
 
@@ -16,9 +16,9 @@ Configurados na raiz React, TypeScript strict, Vite, CSS base, Vitest com jsdom,
 
 ## Fase 2 — integração com API
 
-**Status: Planejada.**
+**Status: Concluída.**
 
-Implementar a camada Open-Meteo para Guarulhos, tipos externos, timeout, tratamento de erro, validação e normalização para domínio; documentar o contrato e a atribuição.
+Implementados endpoint e parâmetros Open-Meteo para Guarulhos, tipos externos e de domínio, validação, normalização diária/horária, erros tipados, timeout de 10 segundos, cancelamento e testes com fixtures locais. A tela ainda não consome o serviço; interface final, análise de intervalos e atribuição visível não fazem parte desta fase.
 
 ## Fase 3 — regras de análise de chuva
 

@@ -6,6 +6,8 @@ Alterações relevantes do projeto são registradas neste arquivo.
 
 ### Adicionado
 
+- Integração isolada com Open-Meteo: URL e parâmetros para Guarulhos, tipos brutos/de domínio, validação, normalização diária e horária, erros tipados, timeout e cancelamento.
+- Fixtures e testes da integração sem chamadas reais à API.
 - Estrutura técnica na raiz com React, TypeScript strict, Vite, ESLint, Vitest, jsdom e React Testing Library.
 - Tela inicial neutra responsiva, tokens de tema escuro, estilos globais e teste básico de renderização.
 - Scripts npm, `.editorconfig` e `.gitignore`.
